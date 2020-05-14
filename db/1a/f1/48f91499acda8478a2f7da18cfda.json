@@ -1,0 +1,1 @@
+{"name":"10 Print chr$(205.5+rnd(1)); : Goto 10","description":"10 PRINT CHR$(205.5+RND(1)); : GOTO 10 Clone in Lua ( TIC-80 )","developer":"potato imaginator","rom_name":"10 Print chr$(205.5+rnd(1)); : Goto 10.tic","size":2347,"crc32":3912589809,"system":"TIC-80"}
