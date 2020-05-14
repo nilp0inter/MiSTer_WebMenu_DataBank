@@ -8,8 +8,9 @@ on:
       - 'build.sh'
       - 'go.*'
       - 'rdb/*.go'
+      - '.github/workflows/go.yml'
   schedule:
-    - cron:  '45 19 * * 4'
+    - cron:  '20 20 * * 4'
 jobs:
 
   build:
@@ -45,7 +46,15 @@ jobs:
         rm -Rf db
         ./build.sh
         xz databank.db
-        
+
+    - name: Delete latest release
+      shell: bash
+      run: |
+        curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+        bin/hub release --include-drafts | grep latest && bin/hub release delete latest || true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Publish DB
       id: create_stable_release
       uses: actions/create-release@latest
