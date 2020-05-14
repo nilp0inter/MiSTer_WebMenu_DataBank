@@ -10,7 +10,7 @@ on:
       - 'rdb/*.go'
       - '.github/workflows/go.yml'
   schedule:
-    - cron:  '20 20 * * 4'
+    - cron:  '30 20 * * 4'
 jobs:
 
   build:
@@ -83,5 +83,4 @@ jobs:
         git config user.name 'Release Bot'
         git config user.email 'release-bot@databank'
         git add db
-        git commit -m "$(date)"
-        git push origin master
+        git commit -m "$(date)" && {git push origin master || exit 1} || exit 0
