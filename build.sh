@@ -34,9 +34,9 @@
 	"libretro-database/rdb/Sharp - X68000.rdb" \
 	"libretro-database/rdb/Sinclair - ZX 81.rdb" \
 	"libretro-database/rdb/Sinclair - ZX Spectrum +3.rdb" \
-	"libretro-database/rdb/Sinclair - ZX Spectrum.rdb" \
-	"libretro-database/rdb/TIC-80.rdb"
+	"libretro-database/rdb/Sinclair - ZX Spectrum.rdb"
 
+	# "libretro-database/rdb/TIC-80.rdb" \
 	# "libretro-database/rdb/Tiger - Game.com.rdb" \
 	# "libretro-database/rdb/Tomb Raider.rdb" \
 	# "libretro-database/rdb/Uzebox.rdb" \
